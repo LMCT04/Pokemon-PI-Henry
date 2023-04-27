@@ -1,0 +1,12 @@
+.Card{
+    border: 1px solid black;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 10px;
+}
+
+.link{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
