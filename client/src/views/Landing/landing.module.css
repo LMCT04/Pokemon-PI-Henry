@@ -18,6 +18,8 @@
     justify-content:center;
     display: flex;
     font-size: 30px;
+    color: #2D3047;
+    text-shadow: 2px 2px #ED217C;
 }
 
 .buttonContainer{
@@ -32,9 +34,9 @@
     border-radius: 10px;
     font-weight: bold;
     border-width: 4px;
-    border-color: #FF8C42;
-    color: #FF3C38;
-    background-color: #FFF275;
+    border-color: #8D2962;
+    color: #2D3047;
+    background-color: #ED217C;
     border-style:solid;
     width: 220px; /* Ancho fijo */
     height: 50px; /* Altura fija */
@@ -43,9 +45,9 @@
 }
 
 .button:hover {
-    color: #FFF275;
-    background-color: #FF3C38;
-    border-color: #FFF275;
+    color: #ED217C;
+    background-color: #2D3047;
+    border-color: #ED217C;
     width: 250px; /* Aumenta el ancho */
     height: 60px; /* Aumenta la altura */
     font-size: 28px; /* Aumenta el tamaño de fuente */

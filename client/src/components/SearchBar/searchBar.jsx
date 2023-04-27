@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { getPokByName } from '../../redux/actions'
+import style from './searchBar.module.css'
 
 
 const SearchBar = () => {
@@ -18,13 +19,14 @@ const SearchBar = () => {
     }
 
     return(
-        <div>
+        <div className={style.searchBar}>
             <form onSubmit={handlerSUBMIT} >
-                <button type='submit' > SEARCH </button>
+                <button className={style.button}  type='submit' > SEARCH </button>
                 <input
                     type='text'
-                    placeholder='introduce un nombre'
+                    placeholder='enter name...'
                     onChange={handlerIMPUTchange}
+                    className={style.input}
                 />
             </form>
         </div>

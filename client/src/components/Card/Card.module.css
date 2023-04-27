@@ -1,12 +1,52 @@
-.Card{
-    border: 1px solid black;
-    width: fit-content;
-    height: fit-content;
-    border-radius: 10px;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+.Card{        
+    border-top-right-radius: 20px;
+    width: 200px;
+    height: 300px;
+    background: #FFFD82;
+    box-shadow: 3px 3px 10px; /*le da profundida a los elementos*/ 
+    font-size: 16px;
+    overflow: hidden;
+    transform: translate(0px);
+    font-family: 'Roboto Mono', monospace;
+    
+};
+
+.Card.link {    
+    color: white;
+    font-family: 'Roboto Mono', monospace;  
 }
 
-.link{
-    text-align: center;
+.name{
+    color: #ED217C;
+    background-color: #2D3047;
     text-decoration: none;
-    color: black;
+    position: absolute;        
+    padding: 10px 23px;
+    font-size: 28px; 
+    right: 8;
+    font-size: 16px;
+    font-family: 'Roboto Mono', monospace;   
+}
+
+.image{
+    position: absolute;
+    top: 80px;
+    left: 24px;
+}
+
+.image:hover {
+    transform: translateY(-5px);
+}
+
+.types {
+    position: absolute;
+    color: #845D84;
+    background-color: #FF9B71;
+    top: 240px;
+    padding: 2px 15px;
+    border-top-right-radius: 10px;
+    font-size: 15px;
+    font-family: 'Roboto Mono', monospace;
 }

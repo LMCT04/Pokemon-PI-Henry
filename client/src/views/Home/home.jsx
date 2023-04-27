@@ -2,6 +2,7 @@ import CardContainer from "../../components/CardsContainer/CardsContainer"
 import { useEffect } from "react"
 import { useDispatch } from 'react-redux'
 import { getPok, getTypes } from "../../redux/actions"
+import style from './home.module.css'
 
 const Home = () => {
 
@@ -13,8 +14,7 @@ const Home = () => {
     },[dispatch])
 
     return(
-        <div>
-            <h1>API POKEMON</h1>
+        <div className={style.homeContainer} >
             <CardContainer/>
         </div>
     )

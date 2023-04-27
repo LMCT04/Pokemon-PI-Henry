@@ -1,24 +1,24 @@
 import { Link } from "react-router-dom"
 import style from './Card.module.css'
 
+//                <div>
+//                    <p className={style.id} >Id: {props.id} </p>
+//                </div>
 const Card = (props) => {
     return(
         <div className={style.Card} >
             <Link className={style.link} to={`/detail/${props.id}`}  >
+
                 <div>
-                    <p>Id: {props.id} </p>
+                    <p className={style.name} >Name: {props.name} </p>
                 </div>
 
                 <div>
-                    <p>Name: {props.name} </p>
+                    <img className={style.image} src={props.image} alt='Not found' width='150px' heigth='150px' />
                 </div>
 
                 <div>
-                    <img src={props.image} alt='Not found' width='150px' heigth='150px' />
-                </div>
-
-                <div>
-                    <p>Types: {props.types} </p>
+                    <p className={style.types} >Types: {props.types} </p>
                 </div>
                 
             </Link>

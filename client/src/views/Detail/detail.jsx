@@ -16,17 +16,18 @@ const Detail = () => {
     }, [dispatch, id])
 
     return (
-        <div>
+        <div className={style.container}>
             {Array.isArray(pokemon) && pokemon.length > 0 ?
             <div>
                 <h1> {pokemon[0].name} </h1>
                 <img
                     src={pokemon[0].image}
                     alt='not found'
+                    className={style.image}
                 />
                 <form>
-                    <label> Types: </label>
-                    <h2> {pokemon[0].types} </h2>
+                    <label> Hp: </label>
+                    <h2> {pokemon[0].hp} </h2>
 
                     <label> Attack: </label>
                     <h2> {pokemon[0].attack} </h2>
@@ -36,9 +37,18 @@ const Detail = () => {
 
                     <label> Speed: </label>
                     <h2> {pokemon[0].speed} </h2>
+
+                    <label> Weight: </label>
+                    <h2> {pokemon[0].weight} </h2>
+
+                    <label> Height: </label>
+                    <h2> {pokemon[0].height} </h2>
+
+                    <label> Types: </label>
+                    <h2> {pokemon[0].types} </h2>
                 </form>
             </div>
-            : <p className={style.loading}></p>
+            : <p></p>
         }
         </div>
     )

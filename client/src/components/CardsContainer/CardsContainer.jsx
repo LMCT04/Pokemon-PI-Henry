@@ -13,7 +13,7 @@ const CardContainer = () => {
     const types = useSelector(state => state.types)
 
     const [page, setPage] = useState(1);
-    const showPerPage = 12;
+    const showPerPage = 16;
     const lastOnPage = page * showPerPage;
     const firstOnPage = lastOnPage - showPerPage;
     const shownPokemons = pokemons.slice(firstOnPage, lastOnPage);
@@ -45,12 +45,12 @@ const CardContainer = () => {
 
     return(
         <div>
-            <select onChange={handlerSort}>
+            <select className={style.filter}  onChange={handlerSort}>
                 <option value="asc">ORDER A - Z</option>
                 <option value="des">ORDER Z - A</option>
             </select>
 
-            <select onChange={handlerFilterTypes}>
+            <select className={style.filter}  onChange={handlerFilterTypes}>
                 <option value="All" hidden>TYPES</option>                        
                 {types.map(type => (
                     <option key={type.id} value={type.name}>
@@ -59,7 +59,7 @@ const CardContainer = () => {
             ))}
             </select>
 
-            <select onChange={handlerFilterCreated} >
+            <select className={style.filter} onChange={handlerFilterCreated} >
                 <option value="created">CREATED</option>
                 <option value="existing">EXISTING</option>              
             </select>    
