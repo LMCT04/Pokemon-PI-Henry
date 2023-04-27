@@ -70,16 +70,18 @@ const searchNameDb = async (name) => {
         include: { 
             model: Type, 
             attributes: ["name"], 
-            as: "types"
-        }
+            as: "types",
+        },
     })
 
     const dataPokemon = database.map((pokemon) => ({
         ...pokemon.toJSON(), types: pokemon.types.map((type) => type.name).flat().sort().join(", ")
     }))
     
+    console.log(dataPokemon)
+    
     return dataPokemon
-}
+};
 
 const searchNameApi = async (name) => {
 
@@ -101,8 +103,8 @@ const searchPokemonByName = async (name) => {
     if(!pokeApi.length && !pokeDb.length)
     throw new Error(`The pokemon ${name} not exist`)
 
-    return [...pokeDb, ...pokeApi]
-}
+    return [...pokeDb, ...pokeApi];
+};
 
 const getPokemonById = async (id, source) => {
 

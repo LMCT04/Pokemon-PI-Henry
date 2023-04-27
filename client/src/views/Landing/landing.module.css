@@ -1,17 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
 .container{
+    font-family: 'Roboto Mono', monospace;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 98.3vh;
+    background-image: url('../../ImageAssets/criaturas-pokemon.jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+    height: 98.3vh;
 }
 
 .titleContainer{
+    font-family: 'Roboto Mono', monospace;
     justify-content:center;
     display: flex;
+    font-size: 30px;
 }
 
 .buttonContainer{
+    text-align: center;
+}
+
+.button{
+    font-family: 'Roboto Mono', monospace;
     justify-content:center;
-    display: flex;
+    cursor: pointer;
+    font-size: 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    border-width: 4px;
+    border-color: #FF8C42;
+    color: #FF3C38;
+    background-color: #FFF275;
+    border-style:solid;
+    width: 220px; /* Ancho fijo */
+    height: 50px; /* Altura fija */
+    transition: all 0.3s ease; /* Animación de transición */
+    
+}
+
+.button:hover {
+    color: #FFF275;
+    background-color: #FF3C38;
+    border-color: #FFF275;
+    width: 250px; /* Aumenta el ancho */
+    height: 60px; /* Aumenta la altura */
+    font-size: 28px; /* Aumenta el tamaño de fuente */
 }

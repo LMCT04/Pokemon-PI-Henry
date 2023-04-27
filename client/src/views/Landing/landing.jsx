@@ -7,11 +7,11 @@ const Landing = () => {
             <div className={style.titleContainer} >
                 <h1 className={style.title} > Bienvenidos a mi API Pokemon </h1>
             </div>
-            <div className={style.buttonContainer} >
-                <Link to='/home'>
+            <Link to='/home'>
+                <div className={style.buttonContainer} >
                     <button className={style.button} > ENTRAR </button>
-                </Link>
-            </div>
+                </div>
+            </Link>
         </div>
     )
 }

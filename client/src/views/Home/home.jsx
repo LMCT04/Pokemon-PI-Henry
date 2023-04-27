@@ -1,7 +1,7 @@
 import CardContainer from "../../components/CardsContainer/CardsContainer"
 import { useEffect } from "react"
 import { useDispatch } from 'react-redux'
-import { getPok } from "../../redux/actions"
+import { getPok, getTypes } from "../../redux/actions"
 
 const Home = () => {
 
@@ -9,6 +9,7 @@ const Home = () => {
 
     useEffect(() => {
         dispatch(getPok())
+        dispatch(getTypes())
     },[dispatch])
 
     return(

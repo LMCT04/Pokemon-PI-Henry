@@ -5,6 +5,9 @@ export const POKEMON_DETAIL = 'POKEMON_DETAIL'
 export const GET_TYPES = 'GET_TYPES'
 export const GET_POKEMON_BY_NAME = 'GET_POKEMON_BY_NAME'
 export const CLEAR_DETAIL = 'CLEAR_DETAIL'
+export const FILTER_TYPES = 'FILTER_TYPES'
+export const FILTER_CREATED = 'FILTER_CREATED'
+export const ORDER_BY_NAME = 'ORDER_BY_NAME'
 
 const urlDbase = 'http://localhost:3001'
 
@@ -41,7 +44,7 @@ export const getDetailPok = (id) => {
 export const getTypes = () => {
     return async function (dispatch) {
         try{
-            const APItypes = await axios.get('/type')
+            const APItypes = await axios.get(`${urlDbase}/type`)
             const types = APItypes.data
 
             dispatch({
@@ -74,3 +77,22 @@ export const clearDetail = () => {
         type: CLEAR_DETAIL,
     };
 }
+
+export const filterTypes = (payload) => {
+    return {
+        type: FILTER_TYPES, payload
+    }
+}
+
+export const filterCreated = (payload) => {
+    return {
+        type: FILTER_CREATED, payload,
+    }
+}
+
+export const orderByName = (payload) => {
+    return {
+        type: ORDER_BY_NAME, payload,
+    }
+}
+
